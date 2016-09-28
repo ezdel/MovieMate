@@ -2,107 +2,192 @@
 <html>
 <head>
 	<title>Movie Mate Survey</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Limelight" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 </head>
 <body>
-	<header><h1>MOVIE MATE</h1></header>
-	<h2>Find Your Movie-Going Soul Mate</h1>
-	<h3>ABOUT YOU</h3>
-	<h4>Name</h4>
-	<input type="text" name="" id="name" class="form-control" required>
-	<h4>Link to Photo</h4>
-	<input type="text" name="" id="photo" class="form-control" required>
-	<h3>MOVIE SURVEY</h3>
-	<h4>Below are 10 recently released or upcoming movies. Click the title for the movie's IMDB page.</h4>
-	<h4>Rate them on a scale from 1-5, based on your interest in seeing them. If you have already seen a movie, be sure to rate it on your intitial interest in seeing it, not on how much you liked it.</h4>
-	<h3><a href="http://www.imdb.com/title/tt3263904/" target="_blank">SULLY</a></h3>
-	<select data-placeholder class="chosen-select" id="q1">
-		<option selected disabled>Rate Your Interest</option>
-		<option value="1">1 (least interested)</option>
-  		<option value="2">2</option>
-  		<option value="3">3</option>
-  		<option value="4">4</option>
-  		<option value="5">5 (most interested)</option>
-  	</select>
-	<h3><a href="http://www.imdb.com/title/tt2404435/" target="_blank">THE MAGNIFICENT SEVEN</a></h3>
-	<select data-placeholder class="chosen-select" id="q2">
-		<option selected disabled>Rate Your Interest</option>
-		<option value="1">1 (least interested)</option>
-  		<option value="2">2</option>
-  		<option value="3">3</option>
-  		<option value="4">4</option>
-  		<option value="5">5 (most interested)</option>
-  	</select>
-	<h3><a href="http://www.imdb.com/title/tt1473832/" target="_blank">BRIDGET JONES'S BABY</a></h3>
-	<select data-placeholder class="chosen-select" id="q3">
-		<option selected disabled>Rate Your Interest</option>
-		<option value="1">1 (least interested)</option>
-  		<option value="2">2</option>
-  		<option value="3">3</option>
-  		<option value="4">4</option>
-  		<option value="5">5 (most interested)</option>
-  	</select>
-	<h3><a href="http://www.imdb.com/title/tt4624424/" target="_blank">STORKS</a></h3>
-	<select data-placeholder class="chosen-select" id="q4">
-		<option selected disabled>Rate Your Interest</option>
-		<option value="1">1 (least interested)</option>
-  		<option value="2">2</option>
-  		<option value="3">3</option>
-  		<option value="4">4</option>
-  		<option value="5">5 (most interested)</option>
-  	</select>
-	<h3><a href="http://www.imdb.com/title/tt3774114/" target="_blank">SNOWDEN</a></h3>
-	<select data-placeholder class="chosen-select" id="q5">
-		<option selected disabled>Rate Your Interest</option>
-		<option value="1">1 (least interested)</option>
-  		<option value="2">2</option>
-  		<option value="3">3</option>
-  		<option value="4">4</option>
-  		<option value="5">5 (most interested)</option>
-  	</select>
-	<h3><a href="http://www.imdb.com/title/tt4160708/" target="_blank">DON'T BREATHE</a></h3>
-	<select data-placeholder class="chosen-select" id="q6">
-		<option selected disabled>Rate Your Interest</option>
-		<option value="1">1 (least interested)</option>
-  		<option value="2">2</option>
-  		<option value="3">3</option>
-  		<option value="4">4</option>
-  		<option value="5">5 (most interested)</option>
-  	</select>
-	<h3><a href="http://www.imdb.com/title/tt1935859/" target="_blank">MISS PEREGRINE'S HOME FOR PECULIAR CHILDREN</a></h3>
-	<select data-placeholder class="chosen-select" id="q7">
-		<option selected disabled>Rate Your Interest</option>
-		<option value="1">1 (least interested)</option>
-  		<option value="2">2</option>
-  		<option value="3">3</option>
-  		<option value="4">4</option>
-  		<option value="5">5 (most interested)</option>
-  	</select>
-	<h3><a href="http://www.imdb.com/title/tt2461150/" target="_blank">MASTERMINDS</a></h3>
-	<select data-placeholder class="chosen-select" id="q8">
-		<option selected disabled>Rate Your Interest</option>
-		<option value="1">1 (least interested)</option>
-  		<option value="2">2</option>
-  		<option value="3">3</option>
-  		<option value="4">4</option>
-  		<option value="5">5 (most interested)</option>
-  	</select>
-	<h3><a href="http://www.imdb.com/title/tt1860357/" target="_blank">DEEPWATER HORIZON</a></h3>
-	<select data-placeholder class="chosen-select" id="q9">
-		<option selected disabled>Rate Your Interest</option>
-		<option value="1">1 (least interested)</option>
-  		<option value="2">2</option>
-  		<option value="3">3</option>
-  		<option value="4">4</option>
-  		<option value="5">5 (most interested)</option>
-  	</select>
-	<h3><a href="http://www.imdb.com/title/tt2140479/" target="_blank">THE ACCOUNTANT</a></h3>
-	<select data-placeholder class="chosen-select" id="q10">
-		<option selected disabled>Rate Your Interest</option>
-		<option value="1">1 (least interested)</option>
-  		<option value="2">2</option>
-  		<option value="3">3</option>
-  		<option value="4">4</option>
-  		<option value="5">5 (most interested)</option>
-  	</select>
+	<div class="container">
+		
+		<h2>ABOUT YOU</h2>
+		<h4>Name</h4>
+		<input type="text" name="" id="name" class="form-control" required>
+		<h4>Link to Photo</h4>
+		<input type="text" name="" id="photo" class="form-control" required>
+		
+		<h2>MOVIE SURVEY</h2>
+		<h4>Below are 10 recently released or upcoming movies. Click the title for the movie's IMDB page.</h4>
+		<h4>Rate them on a scale from 1-5, based on your interest in seeing them. If you have already seen a movie, be sure to rate it on your intitial interest in seeing it, not on how much you liked it.</h4>
+		<h3><a href="http://www.imdb.com/title/tt3263904/" target="_blank">SULLY</a></h3>
+		<select data-placeholder class="chosen-select" id="q1">
+			<option selected disabled>Rate Your Interest</option>
+			<option value="1">1 (least interested)</option>
+  			<option value="2">2</option>
+  			<option value="3">3</option>
+  			<option value="4">4</option>
+  			<option value="5">5 (most interested)</option>
+  		</select>
+		<h3><a href="http://www.imdb.com/title/tt2404435/" target="_blank">THE MAGNIFICENT SEVEN</a></h3>
+		<select data-placeholder class="chosen-select" id="q2">
+			<option selected disabled>Rate Your Interest</option>
+			<option value="1">1 (least interested)</option>
+  			<option value="2">2</option>
+  			<option value="3">3</option>
+  			<option value="4">4</option>
+  			<option value="5">5 (most interested)</option>
+  		</select>
+		<h3><a href="http://www.imdb.com/title/tt1473832/" target="_blank">BRIDGET JONES'S BABY</a></h3>
+		<select data-placeholder class="chosen-select" id="q3">
+			<option selected disabled>Rate Your Interest</option>
+			<option value="1">1 (least interested)</option>
+  			<option value="2">2</option>
+  			<option value="3">3</option>
+  			<option value="4">4</option>
+  			<option value="5">5 (most interested)</option>
+  		</select>
+		<h3><a href="http://www.imdb.com/title/tt4624424/" target="_blank">STORKS</a></h3>
+		<select data-placeholder class="chosen-select" id="q4">
+			<option selected disabled>Rate Your Interest</option>
+			<option value="1">1 (least interested)</option>
+  			<option value="2">2</option>
+  			<option value="3">3</option>
+  			<option value="4">4</option>
+  			<option value="5">5 (most interested)</option>
+  		</select>
+		<h3><a href="http://www.imdb.com/title/tt3774114/" target="_blank">SNOWDEN</a></h3>
+		<select data-placeholder class="chosen-select" id="q5">
+			<option selected disabled>Rate Your Interest</option>
+			<option value="1">1 (least interested)</option>
+  			<option value="2">2</option>
+  			<option value="3">3</option>
+  			<option value="4">4</option>
+  			<option value="5">5 (most interested)</option>
+  		</select>
+		<h3><a href="http://www.imdb.com/title/tt4160708/" target="_blank">DON'T BREATHE</a></h3>
+		<select data-placeholder class="chosen-select" id="q6">
+			<option selected disabled>Rate Your Interest</option>
+			<option value="1">1 (least interested)</option>
+  			<option value="2">2</option>
+  			<option value="3">3</option>
+  			<option value="4">4</option>
+  			<option value="5">5 (most interested)</option>
+  		</select>
+		<h3><a href="http://www.imdb.com/title/tt1935859/" target="_blank">MISS PEREGRINE'S HOME FOR PECULIAR CHILDREN</a></h3>
+		<select data-placeholder class="chosen-select" id="q7">
+			<option selected disabled>Rate Your Interest</option>
+			<option value="1">1 (least interested)</option>
+  			<option value="2">2</option>
+  			<option value="3">3</option>
+  			<option value="4">4</option>
+  			<option value="5">5 (most interested)</option>
+  		</select>
+		<h3><a href="http://www.imdb.com/title/tt2461150/" target="_blank">MASTERMINDS</a></h3>
+		<select data-placeholder class="chosen-select" id="q8">
+			<option selected disabled>Rate Your Interest</option>
+			<option value="1">1 (least interested)</option>
+  			<option value="2">2</option>
+  			<option value="3">3</option>
+  			<option value="4">4</option>
+  			<option value="5">5 (most interested)</option>
+  		</select>
+		<h3><a href="http://www.imdb.com/title/tt1860357/" target="_blank">DEEPWATER HORIZON</a></h3>
+		<select data-placeholder class="chosen-select" id="q9">
+			<option selected disabled>Rate Your Interest</option>
+			<option value="1">1 (least interested)</option>
+  			<option value="2">2</option>
+  			<option value="3">3</option>
+  			<option value="4">4</option>
+  			<option value="5">5 (most interested)</option>
+  		</select>
+		<h3><a href="http://www.imdb.com/title/tt2140479/" target="_blank">THE ACCOUNTANT</a></h3>
+		<select data-placeholder class="chosen-select" id="q10">
+			<option selected disabled>Rate Your Interest</option>
+			<option value="1">1 (least interested)</option>
+  			<option value="2">2</option>
+  			<option value="3">3</option>
+  			<option value="4">4</option>
+  			<option value="5">5 (most interested)</option>
+  		</select>
+  		<br>
+  		<br>
+  		<button type="button" class="btn btn-primary btn-lg" id="submit">SUBMIT</button>
+  		<br>
+  		<br>
+  		<footer class="footer">
+      		<div class="container">
+	        	<p><a href="/api/friends">API Friends Link</a> | <a href="https://github.com/ezdel/MovieMate">GitHub Repo</a></p>
+      		</div>
+    	</footer>
+  	</div>
+
+  	<style type="text/css">
+  		body {
+  			font-family: 'Limelight, cursive';
+  		}
+  		h2 {
+  			color: red;
+  		}
+  		h4 {
+  			color: green;
+  		}
+  	</style>
+
+  	<script type="text/javascript">
+		$('#submit').on('click', function () {
+			var user = {
+				name: $('#name').val().trim(),
+				photo: $('#photo').val().trim(),
+				scores: []
+			};
+			// var q1 = parseInt($('#q1').val());
+			// var q2 = parseInt($('#q2').val());
+			// var q3 = parseInt($('#q3').val());
+			// var q4 = parseInt($('#q4').val());
+			// var q5 = parseInt($('#q5').val());
+			// var q6 = parseInt($('#q6').val());
+			// var q7 = parseInt($('#q7').val());
+			// var q8 = parseInt($('#q8').val());
+			// var q9 = parseInt($('#q9').val());
+			// var q10 = parseInt($('#q10').val());
+						
+			user.scores.push(parseInt($('#q1').val()));
+			user.scores.push(parseInt($('#q2').val()));
+			user.scores.push(parseInt($('#q3').val()));
+			user.scores.push(parseInt($('#q4').val()));
+			user.scores.push(parseInt($('#q5').val()));
+			user.scores.push(parseInt($('#q6').val()));
+			user.scores.push(parseInt($('#q7').val()));
+			user.scores.push(parseInt($('#q8').val()));
+			user.scores.push(parseInt($('#q9').val()));
+			user.scores.push(parseInt($('#q10').val()));
+
+			//user.scores.push(q1, q2, q3, q4, q5, q6, q7, q8, q9, q10);
+
+			var currentURL = window.location.origin;
+
+			$.post(currentURL + "/api/friends", user,
+			function (data) {
+					console.log(data);
+					alert('Your match is being found...');
+
+					$('#name').val('');
+					$('#photo').val('');
+					$('#q1').val('');
+					$('#q2').val('');
+					$('#q3').val('');
+					$('#q4').val('');
+					$('#q5').val('');
+					$('#q6').val('');
+					$('#q7').val('');
+					$('#q8').val('');
+					$('#q9').val('');
+					$('#q10').val('');
+
+				});
+
+			return false;
+		});
+	</script>
 </body>
 </html>
