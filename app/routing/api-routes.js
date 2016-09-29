@@ -1,6 +1,15 @@
 
 var friendData = require('../data/friends.js');
 
+var matchCount = 50;
+var userScores = 0;
+var name = '';
+var pic = '';
+var matchName = '';
+var matchPic = '';
+var diffArray = [];
+var diffCount = 0;
+
 module.exports = function(app){
 	app.get('/api/friends', function(req, res) {
 		res.json(friendData);
@@ -17,16 +26,8 @@ module.exports = function(app){
 	});
 };
 
-function mateMatch(user, friendData){
-	var matchCount = 50;
-	var userScores = user.scores;
-	var name;
-	var pic;
-	var matchName = '';
-	var matchPic = '';
-	var diffArray = [];
-	var diffCount = 0;
-	
+function mateMatch(user, friendData) {
+	userScores = user.scores;
 	for (var i = 0; i<friendData.length; i++){
 		name = friendData[i].name;
 		pic = friendData[i].photo;
@@ -44,8 +45,5 @@ function mateMatch(user, friendData){
 			};
 		};
 	};
-	console.log(matchName);
-	console.log(matchPic);
-	console.log(matchCount);
 	
 };
