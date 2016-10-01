@@ -1,14 +1,10 @@
 
 var friendData = require('../data/friends.js');
+var matchname = "";
+var matchpic = "";
 
-var matchCount = 50;
-var userScores = 0;
-var name = '';
-var pic = '';
-var matchName = '';
-var matchPic = '';
-var diffArray = [];
-var diffCount = 0;
+
+
 
 module.exports = function(app){
 	app.get('/api/friends', function(req, res) {
@@ -17,33 +13,32 @@ module.exports = function(app){
 
 
 	app.post('/api/friends', function(req, res) {
-		 var user = req.body;
-
+		var user = req.body;
+		
 		mateMatch(user, friendData);
 
 		friendData.push(req.body);
-		res.json(true);
+		res.json(match);
 	});
 };
 
 function mateMatch(user, friendData) {
-	userScores = user.scores;
+	var diffArray = [];
+
 	for (var i = 0; i<friendData.length; i++){
-		name = friendData[i].name;
-		pic = friendData[i].photo;
 		var matchScores = friendData[i].scores;
-		diffArray.push(Math.abs(userScores[i] - matchScores[i]));
+		var userScores = user.scores;
+		var diffCount = 0;
+		matchScores = friendData[i].scores;
+		userScores = user.scores;
 
-		for (var i = 0; i<diffArray.length; i++){
-		diffCount += diffArray[i];
+		for (var j = 0; j < matchScores.length; j++){
+			diffCount += (Math.abs(userScores[j] - matchScores[j]));
+		}
 
-		
-			if (diffCount < matchCount){
-				matchCount = diffCount;
-				matchName = name;
-				matchPic = pic;
-			};
-		};
+		diffArray.push(diffCount);
 	};
-	
+	var matchIndex = diffArray.indexOf(Math.min.apply(Math, diffArray));
+	match = friendData[matchIndex];
 };
+
